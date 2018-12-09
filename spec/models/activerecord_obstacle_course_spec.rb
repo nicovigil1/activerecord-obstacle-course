@@ -129,7 +129,7 @@ describe 'ActiveRecord Obstacle Course' do
     expect(orders).to eq(expected_result)
   end
 
-  xit '7. finds orders with an amount between 700 and 1000' do
+  it '7. finds orders with an amount between 700 and 1000' do
     expected_result = [order_8, order_10, order_11, order_12, order_13, order_14, order_15]
 
     # ----------------------- Using Ruby -------------------------
@@ -137,7 +137,7 @@ describe 'ActiveRecord Obstacle Course' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord ----------------------
-    orders_between_700_and_1000 = Order.pluck(:amount)#.where(start:700, finish:1000)
+    orders_between_700_and_1000 = Order.where("amount >= 700 AND amount <= 1000 ")
     # ------------------------------------------------------------
 
     # Expectation
