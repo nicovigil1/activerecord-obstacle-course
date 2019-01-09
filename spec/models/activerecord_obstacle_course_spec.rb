@@ -626,7 +626,7 @@ describe 'ActiveRecord Obstacle Course' do
     Bullet.start_request
 
     # ------------------------------------------------------
-    orders = Order.all# Edit only this line
+    orders = Order.all.includes(:items)# Edit only this line
     # ------------------------------------------------------
 
     # Do not edit below this line
