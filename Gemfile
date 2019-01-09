@@ -24,6 +24,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'table_print'
+  gem 'bullet'
 end
 
 group :development do
